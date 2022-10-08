@@ -2,6 +2,8 @@ import React from "react"
 
 export default function Navbar() {
     return (
-        <h2>Navbar Component</h2>
+        <nav>
+            <p className="nav--title">my travel journal</p>
+        </nav>
     )
 }

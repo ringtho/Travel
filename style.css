@@ -2,3 +2,21 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+
+nav {
+    height: 55px;
+    width: 550px;
+    background-color: #F55A5A;
+    color: #FFFFFF;
+}
+
+.nav--title {
+    font-size: 15px;
+    letter-spacing: -1px;
+    text-align: center;
+    line-height: 55px;
+}
