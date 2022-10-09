@@ -20,3 +20,73 @@ nav {
     text-align: center;
     line-height: 55px;
 }
+
+.card--container {
+    padding: 40px;
+    display: flex;
+    border-bottom: 1px solid #F5F5F5
+    ;
+}
+
+.card--image {
+    width:125px;
+    height: 168px;
+    border-radius: 5px;
+}
+
+.card--description {
+    padding-left: 20px;
+    color:#2B283A;
+}
+
+/* .card--description > p,
+.card--description > h1,
+.card--description > h4 {
+    margin: 0;
+} */
+
+.card--country {
+    display: flex;
+    font-size: 10.24px;
+    font-weight: 400;
+    margin-top: 10px;
+    top: 119px;
+}
+
+.icon {
+    width: 9px;
+    height: 9px;
+    padding-right: 4px;
+
+}
+
+.country {
+    letter-spacing: 2px;
+}
+
+.googleMaps {
+    padding-left: 12px;   
+}
+
+.googleMaps > a {
+    color:#918E9B;
+}
+
+.location {
+    font-size: 25px;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.period {
+    font-size: 10.24px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.description {
+    font-size: 10.24px;
+    font-weight: 400;
+}
+
+

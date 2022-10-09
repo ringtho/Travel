@@ -484,9 +484,47 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Card() {
     return _react2.default.createElement(
-        "h1",
-        null,
-        "Card Component"
+        "main",
+        { className: "card--container" },
+        _react2.default.createElement("img", { className: "card--image", src: "https://source.unsplash.com/WLxQvbMyfas" }),
+        _react2.default.createElement(
+            "div",
+            { className: "card--description" },
+            _react2.default.createElement(
+                "div",
+                { className: "card--country" },
+                _react2.default.createElement(
+                    "p",
+                    { className: "country" },
+                    _react2.default.createElement("img", { className: "icon", src: "../images/map.png" }),
+                    "JAPAN"
+                ),
+                _react2.default.createElement(
+                    "p",
+                    { className: "googleMaps" },
+                    _react2.default.createElement(
+                        "a",
+                        { href: "#" },
+                        "View on Google Maps"
+                    )
+                )
+            ),
+            _react2.default.createElement(
+                "h1",
+                { className: "location" },
+                "Mount Fuji"
+            ),
+            _react2.default.createElement(
+                "h4",
+                { className: "period" },
+                "12 Jan, 2021 - 24 Jan, 2021"
+            ),
+            _react2.default.createElement(
+                "p",
+                { className: "description" },
+                "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+            )
+        )
     );
 }
 
