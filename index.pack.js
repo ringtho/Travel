@@ -406,14 +406,30 @@ var _Card = __webpack_require__(6);
 
 var _Card2 = _interopRequireDefault(_Card);
 
+var _data = __webpack_require__(18);
+
+var _data2 = _interopRequireDefault(_data);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function App() {
+    var cards = _data2.default.map(function (item) {
+        return _react2.default.createElement(_Card2.default, {
+            key: item.id,
+            title: item.title,
+            location: item.location,
+            googleMapsUrl: item.googleMapsUrl,
+            startDate: item.startDate,
+            endDate: item.endDate,
+            description: item.description,
+            imageUrl: item.imageUrl
+        });
+    });
     return _react2.default.createElement(
         "div",
         { className: "container" },
         _react2.default.createElement(_Navbar2.default, null),
-        _react2.default.createElement(_Card2.default, null)
+        cards
     );
 }
 
@@ -482,11 +498,11 @@ var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function Card() {
+function Card(props) {
     return _react2.default.createElement(
         "main",
         { className: "card--container" },
-        _react2.default.createElement("img", { className: "card--image", src: "https://source.unsplash.com/WLxQvbMyfas" }),
+        _react2.default.createElement("img", { className: "card--image", src: props.imageUrl }),
         _react2.default.createElement(
             "div",
             { className: "card--description" },
@@ -495,16 +511,16 @@ function Card() {
                 { className: "card--country" },
                 _react2.default.createElement(
                     "p",
-                    { className: "country" },
+                    { className: props.location },
                     _react2.default.createElement("img", { className: "icon", src: "../images/map.png" }),
-                    "JAPAN"
+                    props.location.toUpperCase()
                 ),
                 _react2.default.createElement(
                     "p",
                     { className: "googleMaps" },
                     _react2.default.createElement(
                         "a",
-                        { href: "#" },
+                        { href: props.googleMapsUrl },
                         "View on Google Maps"
                     )
                 )
@@ -512,17 +528,17 @@ function Card() {
             _react2.default.createElement(
                 "h1",
                 { className: "location" },
-                "Mount Fuji"
+                props.title
             ),
             _react2.default.createElement(
                 "h4",
                 { className: "period" },
-                "12 Jan, 2021 - 24 Jan, 2021"
+                props.startDate + " - " + props.endDate
             ),
             _react2.default.createElement(
                 "p",
                 { className: "description" },
-                "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists."
+                props.description
             )
         )
     );
@@ -30594,6 +30610,45 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0)))
+
+/***/ }),
+/* 18 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.default = [{
+    id: 1,
+    title: "Mount Fuji",
+    location: "Japan",
+    googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
+    startDate: "12 Jan, 2021",
+    endDate: "24 Jan, 2021",
+    description: "Mount Fuji is the tallest mountain in Japan, standing at 3,776 meters (12,380 feet). Mount Fuji is the single most popular tourist site in Japan, for both Japanese and foreign tourists.",
+    imageUrl: "https://source.unsplash.com/WLxQvbMyfas"
+}, {
+    id: 2,
+    title: "Sydney Opera House",
+    location: "Australia",
+    googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
+    startDate: "27 May, 2021",
+    endDate: "8 Jun, 2021",
+    description: "The Sydney Opera House is a multi-venue performing arts centre in Sydney. Located on the banks of the Sydney Harbour, it is often regarded as one of the 20th century's most famous and distinctive buildings",
+    imageUrl: "https://source.unsplash.com/JmuyB_LibRo"
+}, {
+    id: 3,
+    title: "Geirangerfjord",
+    location: "Norway",
+    googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
+    startDate: "01 Oct, 2021",
+    endDate: "18 Nov, 2021",
+    description: "The Geiranger Fjord is a fjord in the Sunnmøre region of Møre og Romsdal county, Norway. It is located entirely in the Stranda Municipality.",
+    imageUrl: "https://source.unsplash.com/3PeSjpLVtLg"
+}];
 
 /***/ })
 /******/ ]);

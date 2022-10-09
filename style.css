@@ -26,6 +26,7 @@ nav {
     display: flex;
     border-bottom: 1px solid #F5F5F5
     ;
+    margin-bottom: -10px;
 }
 
 .card--image {
@@ -38,12 +39,6 @@ nav {
     padding-left: 20px;
     color:#2B283A;
 }
-
-/* .card--description > p,
-.card--description > h1,
-.card--description > h4 {
-    margin: 0;
-} */
 
 .card--country {
     display: flex;
