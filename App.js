@@ -8,13 +8,8 @@ function App() {
         item => 
             <Card 
             key={item.id}
-            title={item.title}
-            location={item.location}
-            googleMapsUrl={item.googleMapsUrl}
-            startDate={item.startDate}
-            endDate={item.endDate}
-            description={item.description}
-            imageUrl={item.imageUrl}
+            item={item}
+            
             />
         
             )

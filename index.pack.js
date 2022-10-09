@@ -416,13 +416,8 @@ function App() {
     var cards = _data2.default.map(function (item) {
         return _react2.default.createElement(_Card2.default, {
             key: item.id,
-            title: item.title,
-            location: item.location,
-            googleMapsUrl: item.googleMapsUrl,
-            startDate: item.startDate,
-            endDate: item.endDate,
-            description: item.description,
-            imageUrl: item.imageUrl
+            item: item
+
         });
     });
     return _react2.default.createElement(
@@ -502,7 +497,7 @@ function Card(props) {
     return _react2.default.createElement(
         "main",
         { className: "card--container" },
-        _react2.default.createElement("img", { className: "card--image", src: props.imageUrl }),
+        _react2.default.createElement("img", { className: "card--image", src: props.item.imageUrl }),
         _react2.default.createElement(
             "div",
             { className: "card--description" },
@@ -511,16 +506,16 @@ function Card(props) {
                 { className: "card--country" },
                 _react2.default.createElement(
                     "p",
-                    { className: props.location },
+                    { className: props.item.location },
                     _react2.default.createElement("img", { className: "icon", src: "../images/map.png" }),
-                    props.location.toUpperCase()
+                    props.item.location.toUpperCase()
                 ),
                 _react2.default.createElement(
                     "p",
                     { className: "googleMaps" },
                     _react2.default.createElement(
                         "a",
-                        { href: props.googleMapsUrl },
+                        { href: props.item.googleMapsUrl },
                         "View on Google Maps"
                     )
                 )
@@ -528,17 +523,17 @@ function Card(props) {
             _react2.default.createElement(
                 "h1",
                 { className: "location" },
-                props.title
+                props.item.title
             ),
             _react2.default.createElement(
                 "h4",
                 { className: "period" },
-                props.startDate + " - " + props.endDate
+                props.item.startDate + " - " + props.item.endDate
             ),
             _react2.default.createElement(
                 "p",
                 { className: "description" },
-                props.description
+                props.item.description
             )
         )
     );
