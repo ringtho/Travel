@@ -79,12 +79,10 @@ nav {
 
 .location {
     font-size: 22px;
-    font-weight: 700;
     margin-top: 8px;
 }
 
 .period {
-    font-weight: 700;
     margin: 10px 0;
 }
 
@@ -93,8 +91,9 @@ nav {
     line-height: 1.5em;
 }
 
-.fa-earth-africa {
-    font-size: 24px;
+.location,
+.period {
+    font-weight: 700;
 }
 
 .period,
@@ -103,4 +102,6 @@ nav {
     font-size: 12px;
 }
 
-
+.fa-earth-africa {
+    font-size: 24px;
+}
