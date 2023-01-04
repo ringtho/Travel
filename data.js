@@ -13,7 +13,7 @@ export default [
     {
         id: 2,
         title: "Sydney Opera House",
-        location: "Australia",
+        location: "Germany",
         googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
         startDate: "27 May, 2021",
         endDate: "8 Jun, 2021",

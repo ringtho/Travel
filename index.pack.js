@@ -524,7 +524,7 @@ function Card(props) {
                 ),
                 _react2.default.createElement(
                     "h1",
-                    { className: "location" },
+                    { className: "title" },
                     props.item.title
                 ),
                 _react2.default.createElement(
@@ -597,7 +597,7 @@ exports.default = [{
 }, {
     id: 2,
     title: "Sydney Opera House",
-    location: "Australia",
+    location: "Germany",
     googleMapsUrl: "https://goo.gl/maps/1DGM5WrWnATgkSNB8",
     startDate: "27 May, 2021",
     endDate: "8 Jun, 2021",
