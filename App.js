@@ -9,10 +9,7 @@ function App() {
             <Card 
             key={item.id}
             item={item}
-            
-            />
-        
-            )
+            />)
     return (
         <div className="container">
             <Navbar />

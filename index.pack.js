@@ -417,7 +417,6 @@ function App() {
         return _react2.default.createElement(_Card2.default, {
             key: item.id,
             item: item
-
         });
     });
     return _react2.default.createElement(
@@ -495,45 +494,49 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function Card(props) {
     return _react2.default.createElement(
-        "main",
+        "section",
         { className: "card--container" },
-        _react2.default.createElement("img", { className: "card--image", src: props.item.imageUrl }),
         _react2.default.createElement(
             "div",
-            { className: "card--description" },
+            { className: "card-holder" },
+            _react2.default.createElement("img", { className: "card--image", src: props.item.imageUrl }),
             _react2.default.createElement(
                 "div",
-                { className: "card--country" },
+                { className: "card--description" },
                 _react2.default.createElement(
-                    "p",
-                    { className: props.item.location },
-                    _react2.default.createElement("img", { className: "icon", src: "../images/map.png" }),
-                    props.item.location.toUpperCase()
+                    "div",
+                    { className: "card--country" },
+                    _react2.default.createElement(
+                        "p",
+                        { className: "country" },
+                        _react2.default.createElement("img", { className: "icon", src: "../images/map.png" }),
+                        props.item.location.toUpperCase()
+                    ),
+                    _react2.default.createElement(
+                        "p",
+                        { className: "googleMaps" },
+                        _react2.default.createElement(
+                            "a",
+                            { href: props.item.googleMapsUrl },
+                            "View on Google Maps"
+                        )
+                    )
+                ),
+                _react2.default.createElement(
+                    "h1",
+                    { className: "location" },
+                    props.item.title
+                ),
+                _react2.default.createElement(
+                    "h4",
+                    { className: "period" },
+                    props.item.startDate + " - " + props.item.endDate
                 ),
                 _react2.default.createElement(
                     "p",
-                    { className: "googleMaps" },
-                    _react2.default.createElement(
-                        "a",
-                        { href: props.item.googleMapsUrl },
-                        "View on Google Maps"
-                    )
+                    { className: "description" },
+                    props.item.description
                 )
-            ),
-            _react2.default.createElement(
-                "h1",
-                { className: "location" },
-                props.item.title
-            ),
-            _react2.default.createElement(
-                "h4",
-                { className: "period" },
-                props.item.startDate + " - " + props.item.endDate
-            ),
-            _react2.default.createElement(
-                "p",
-                { className: "description" },
-                props.item.description
             )
         )
     );
