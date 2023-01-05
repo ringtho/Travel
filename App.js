@@ -8,7 +8,7 @@ function App() {
         item => 
             <Card 
             key={item.id}
-            item={item}
+            {...item}
             />)
     return (
         <div className="container">

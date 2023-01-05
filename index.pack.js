@@ -394,6 +394,8 @@ Object.defineProperty(exports, "__esModule", {
     value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = __webpack_require__(1);
 
 var _react2 = _interopRequireDefault(_react);
@@ -414,10 +416,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 function App() {
     var cards = _data2.default.map(function (item) {
-        return _react2.default.createElement(_Card2.default, {
-            key: item.id,
-            item: item
-        });
+        return _react2.default.createElement(_Card2.default, _extends({
+            key: item.id
+        }, item));
     });
     return _react2.default.createElement(
         "div",
@@ -499,7 +500,7 @@ function Card(props) {
         _react2.default.createElement(
             "div",
             { className: "card-holder" },
-            _react2.default.createElement("img", { className: "card--image", src: props.item.imageUrl }),
+            _react2.default.createElement("img", { className: "card--image", src: props.imageUrl }),
             _react2.default.createElement(
                 "div",
                 { className: "card--description" },
@@ -510,14 +511,14 @@ function Card(props) {
                         "p",
                         { className: "country" },
                         _react2.default.createElement("img", { className: "icon", src: "../images/map.png" }),
-                        props.item.location.toUpperCase()
+                        props.location.toUpperCase()
                     ),
                     _react2.default.createElement(
                         "p",
                         { className: "googleMaps" },
                         _react2.default.createElement(
                             "a",
-                            { href: props.item.googleMapsUrl },
+                            { href: props.googleMapsUrl },
                             "View on Google Maps"
                         )
                     )
@@ -525,17 +526,17 @@ function Card(props) {
                 _react2.default.createElement(
                     "h1",
                     { className: "title" },
-                    props.item.title
+                    props.title
                 ),
                 _react2.default.createElement(
                     "h4",
                     { className: "period" },
-                    props.item.startDate + " - " + props.item.endDate
+                    props.startDate + " - " + props.endDate
                 ),
                 _react2.default.createElement(
                     "p",
                     { className: "description" },
-                    props.item.description
+                    props.description
                 )
             )
         )
